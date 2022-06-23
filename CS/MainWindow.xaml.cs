@@ -5,7 +5,7 @@ using DevExpress.Xpf.Layout.Core;
 using System.Windows.Controls;
 
 namespace DXSample {
-    public partial class MainWindow : DXWindow {
+    public partial class MainWindow : ThemedWindow {
         const string LayoutFileName = "layout.xml";
         public MainWindow() {
             InitializeComponent();
