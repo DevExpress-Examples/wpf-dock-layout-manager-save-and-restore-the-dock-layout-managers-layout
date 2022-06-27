@@ -11,7 +11,7 @@
 * [RestoreLayoutFromStream](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager.RestoreLayoutFromStream(System.IO.Stream))
 * [RestoreLayoutFromXml](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager.RestoreLayoutFromXml(System.String))
 
-You should specify the names for all [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) item. [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) uses these names to identify items when you save/restore a layout.
+You should specify the names for all [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) items. [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) uses these names to identify items when you save/restore a layout.
 
 <img src="https://user-images.githubusercontent.com/12169834/175369030-9f965ca6-60fe-4f8a-859c-e32c8bbd888d.png" width=700px/>
 
