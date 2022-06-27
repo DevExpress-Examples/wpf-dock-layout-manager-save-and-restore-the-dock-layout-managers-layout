@@ -17,7 +17,7 @@ You should specify the names for all [DockLayoutManager](https://docs.devexpress
 
 Panels may be added/removed after you save the [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager)'s layout. In this case, [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) removes panels that do not exist in the saved layout and ignores saved settings for these items. Set the following options to change this behavior:
 
-* Set [RestoreLayoutOptions.RemoveOldPanels](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.RestoreLayoutOptions.RemoveOldPanels) to `false` to re-create panels that exists in the saved layout.
+* Set [RestoreLayoutOptions.RemoveOldPanels](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.RestoreLayoutOptions.RemoveOldPanels) to `false` to recreate panels that exist in the saved layout.
 * Set [RestoreLayoutOptions.AddNewPanels](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.RestoreLayoutOptions.AddNewPanels) to `true` to maintain panels that are not exist in the saved layout.
 
 The [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager)'s methods save settings only of its groups and panels.
