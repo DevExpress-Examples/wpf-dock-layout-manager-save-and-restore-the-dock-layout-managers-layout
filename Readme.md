@@ -1,28 +1,40 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128643812/12.1.4%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T326289)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+# WPF Dock Layout Manager - Save and Restore the DockLayoutManager's Layout
 
-* **[MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))**
+[DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) includes the following methods to save and restore layout settings:
+
+* [SaveLayoutToStream](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager.SaveLayoutToStream(System.IO.Stream))
+* [SaveLayoutToXml](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager.SaveLayoutToXml(System.String))
+* [RestoreLayoutFromStream](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager.RestoreLayoutFromStream(System.IO.Stream))
+* [RestoreLayoutFromXml](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager.RestoreLayoutFromXml(System.String))
+
+You should specify the names for all [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) items. [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) uses these names to identify items when you save/restore a layout.
+
+<img src="https://user-images.githubusercontent.com/12169834/175369030-9f965ca6-60fe-4f8a-859c-e32c8bbd888d.png" width=700px/>
+
+Panels may be added/removed after you save the [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager)'s layout. In this case, [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager) removes panels that do not exist in the saved layout and ignores saved settings for these items. Set the following options to change this behavior:
+
+* Set [RestoreLayoutOptions.RemoveOldPanels](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.RestoreLayoutOptions.RemoveOldPanels) to `false` to recreate panels that exist in the saved layout.
+* Set [RestoreLayoutOptions.AddNewPanels](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.RestoreLayoutOptions.AddNewPanels) to `true` to maintain panels that do not exist in the saved layout.
+
+The [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DockLayoutManager)'s methods save settings only of its groups and panels.
+
+<!-- default file list -->
+## Files to Look At
+
+* [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
 <!-- default file list end -->
-# How to: Save and Restore the DockLayoutManager Layout
 
+## Documentation
+- [Save and Restore the Layout of Dock Panels and Controls](https://docs.devexpress.com/WPF/7059/controls-and-libraries/layout-management/dock-windows/miscellaneous/saving-and-restoring-the-layout-of-dock-panels-and-controls)
+- [Save/Restore Control Layout Overview](https://docs.devexpress.com/WPF/7391/common-concepts/save-and-restore-layouts)
 
-<p>DockLayoutManager provides several methods to save and restore layout settings
+## More Examples
 
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfDockingDockLayoutManager_SaveLayoutToStreamtopic.aspx">SaveLayoutToStream</a>;
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfDockingDockLayoutManager_SaveLayoutToXmltopic.aspx">SaveLayoutToXml</a>;
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfDockingDockLayoutManager_RestoreLayoutFromStreamtopic.aspx">RestoreLayoutFromStream</a>;
-* <a href="https://documentation.devexpress.com/WPF/DevExpressXpfDockingDockLayoutManager_RestoreLayoutFromXmltopic.aspx">RestoreLayoutFromXml</a>.</p>
-<p>Note that item names are used to identify them when saving/restoring a layout, so it will be necessary to set names for all DXDocking items to make sure that settings will be restored properly.<br><br>It may happen that some panels were added/removed after the DockLayoutManager's layout was saved. In this scenario, DockLayoutManager will remove panels that are not present in the saved layout and ignore saved settings for items that do not exist anymore. To change this behavior, set the following options
-
-* To re-create panels that are present in the saved layout, set <strong>RestoreLayoutOptions.RemoveOldPanels</strong> to False.
-* Set <strong>RestoreLayoutOptions.AddNewPanels</strong> to True to maintain panels that are not present in the saved layout.<br><br>Please note that the DockLayoutManager's methods save settings only of its groups and panels. To save settings of embedded controls, use <a href="https://documentation.devexpress.com/#WPF/clsDevExpressXpfCoreWorkspaceManagertopic">WorkspaceManager</a> as shown at <a href="https://www.devexpress.com/Support/Center/p/E2272">How to save and restore settings of all controls that are present in the UI</a>.<br><br><strong>See also:<br></strong><a href="https://www.devexpress.com/Support/Center/p/E2320">How to serialize a particular panel layout</a><br><a href="https://www.devexpress.com/Support/Center/p/E2324">How to serialize custom panels and their properties</a><br><a href="https://www.devexpress.com/Support/Center/p/E2272">How to save and restore settings of all controls that are present in the UI</a></p>
-
-<br/>
-
-
+- [WPF Dock Layout Manager - Save and Restore Settings of All Controls That Are Present in the UI](https://github.com/DevExpress-Examples/wpf-dock-layout-manager-save-and-restore-settings-of-all-controls-that-are-present-in-the-ui)
+- [WPF Dock Layout Manager - Serialize Custom Panels and Their Properties](https://github.com/DevExpress-Examples/wpf-dock-layout-manager-serialize-custom-panels-and-their-properties)
+- [WPF Dock Layout Manager - Serialize a Particular Panel's Layout](https://github.com/DevExpress-Examples/wpf-dock-layout-manager-serialize-a-particular-panels-layout)
