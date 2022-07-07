@@ -1,29 +1,33 @@
-﻿Imports System
+Imports System
 Imports DevExpress.Xpf.Core
-Imports DevExpress.Xpf.Docking
 Imports DevExpress.Xpf.Layout.Core
 Imports System.Windows.Controls
 
 Namespace DXSample
-    Partial Public Class MainWindow
+
+    Public Partial Class MainWindow
         Inherits DXWindow
 
-        Private Const LayoutFileName As String = "layout.xml"
+        Const LayoutFileName As String = "layout.xml"
+
         Public Sub New()
-            InitializeComponent()
+            Me.InitializeComponent()
         End Sub
-        Private Sub OnSaveButtonClick(ByVal sender As Object, ByVal e As System.Windows.RoutedEventArgs)
-            manager.SaveLayoutToXml(LayoutFileName)
+
+        Private Sub OnSaveButtonClick(ByVal sender As Object, ByVal e As Windows.RoutedEventArgs)
+            Me.manager.SaveLayoutToXml(LayoutFileName)
         End Sub
-        Private Sub OnRestoreButtonClick(ByVal sender As Object, ByVal e As System.Windows.RoutedEventArgs)
-            manager.RestoreLayoutFromXml(LayoutFileName)
+
+        Private Sub OnRestoreButtonClick(ByVal sender As Object, ByVal e As Windows.RoutedEventArgs)
+            Me.manager.RestoreLayoutFromXml(LayoutFileName)
         End Sub
-        Private Sub OnAddPanelButtonClick(ByVal sender As Object, ByVal e As System.Windows.RoutedEventArgs)
-            Dim panel = manager.DockController.AddPanel(DockType.Fill)
+
+        Private Sub OnAddPanelButtonClick(ByVal sender As Object, ByVal e As Windows.RoutedEventArgs)
+            Dim panel = Me.manager.DockController.AddPanel(DockType.Fill)
             panel.Name = "panel4"
             panel.Caption = "Panel4"
-            manager.DockController.Dock(panel, root, DockType.Right)
-            DirectCast(sender, Button).IsEnabled = False
+            Me.manager.DockController.Dock(panel, Me.root, DockType.Right)
+            CType(sender, Button).IsEnabled = False
         End Sub
     End Class
 End Namespace
