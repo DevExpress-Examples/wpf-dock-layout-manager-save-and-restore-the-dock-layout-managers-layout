@@ -1,7 +1,7 @@
-Imports System
 Imports DevExpress.Xpf.Core
 Imports DevExpress.Xpf.Layout.Core
 Imports System.Windows.Controls
+Imports System.Windows
 
 Namespace DXSample
 
@@ -14,15 +14,15 @@ Namespace DXSample
             Me.InitializeComponent()
         End Sub
 
-        Private Sub OnSaveButtonClick(ByVal sender As Object, ByVal e As Windows.RoutedEventArgs)
+        Private Sub OnSaveButtonClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
             Me.manager.SaveLayoutToXml(LayoutFileName)
         End Sub
 
-        Private Sub OnRestoreButtonClick(ByVal sender As Object, ByVal e As Windows.RoutedEventArgs)
+        Private Sub OnRestoreButtonClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
             Me.manager.RestoreLayoutFromXml(LayoutFileName)
         End Sub
 
-        Private Sub OnAddPanelButtonClick(ByVal sender As Object, ByVal e As Windows.RoutedEventArgs)
+        Private Sub OnAddPanelButtonClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
             Dim panel = Me.manager.DockController.AddPanel(DockType.Fill)
             panel.Name = "panel4"
             panel.Caption = "Panel4"
