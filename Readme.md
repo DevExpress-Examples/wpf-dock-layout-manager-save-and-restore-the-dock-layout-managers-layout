@@ -40,7 +40,7 @@ The [DockLayoutManager](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.D
 - [WPF Dock Layout Manager - Save and Restore Settings of All Controls That Are Present in the UI](https://github.com/DevExpress-Examples/wpf-dock-layout-manager-save-and-restore-settings-of-all-controls-that-are-present-in-the-ui)
 - [WPF Dock Layout Manager - Serialize Custom Panels and Their Properties](https://github.com/DevExpress-Examples/wpf-dock-layout-manager-serialize-custom-panels-and-their-properties)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-dock-layout-manager-save-and-restore-the-dock-layout-managers-layout&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-dock-layout-manager-save-and-restore-the-dock-layout-managers-layout&~~~was_helpful=no)
 
